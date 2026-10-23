@@ -14,8 +14,8 @@
     --dim:#6f6c65;
     --dim2:#a29e95;
     --rule:#e4dfd4;
-    --red:#a83a2c;
-    --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+    --red:#b1402c;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif SC","Noto Serif CJK SC","STSong",Georgia,serif;
     --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB",system-ui,sans-serif;
     --max:1160px;
   }
@@ -41,18 +41,21 @@
 
   section{padding:76px 0;border-top:1px solid var(--ink)}
   section:first-of-type{border-top:0;padding-top:20px}
-  .chapter{display:grid;grid-template-columns:auto 1fr;gap:2px 26px;align-items:end;margin-bottom:46px}
-  .ch-no{grid-row:span 2;font-family:var(--serif);font-size:clamp(46px,7vw,78px);line-height:.82;color:#ded8cb;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
-  .chapter h2{font-family:var(--serif);font-size:clamp(21px,2.8vw,28px);font-weight:600;letter-spacing:.01em;line-height:1.3}
-  .chapter p{font-size:12px;color:var(--dim);letter-spacing:.02em;margin-top:6px}
+  .chapter{display:grid;grid-template-columns:auto 1fr;gap:2px 26px;align-items:end;margin-bottom:46px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+  .ch-no{grid-row:span 2;font-family:var(--serif);font-size:clamp(58px,9vw,104px);line-height:.78;color:#e6e0d3;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+  .chapter h2{font-family:var(--serif);font-size:clamp(23px,3.1vw,32px);font-weight:600;letter-spacing:.01em;line-height:1.28}
+  .chapter p{font-size:11px;color:var(--dim2);letter-spacing:.07em;margin-top:7px}
 
-  .works{display:grid;grid-template-columns:repeat(2,1fr);gap:58px 46px}
+  .works{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 30px}
+  @media(max-width:1100px){.works{grid-template-columns:repeat(2,1fr);gap:48px 36px}}
   .card{display:flex;flex-direction:column}
   .cover{display:block;background:var(--card);border:1px solid var(--rule);overflow:hidden}
   .cover img{width:100%;height:auto;transition:transform .6s cubic-bezier(.16,1,.3,1)}
   .card:hover .cover img{transform:scale(1.018)}
   .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}
-  .thumbs a{display:block;background:var(--card);border:1px solid var(--rule);overflow:hidden}
+  .thumbs a{display:block;position:relative;background:var(--card);border:1px solid var(--rule);overflow:hidden}
+  .thumbs a::after{content:'';position:absolute;inset:0;background:rgba(20,18,14,.10);opacity:0;transition:opacity .25s}
+  .thumbs a:hover::after{opacity:1}
   .thumbs img{width:100%;height:auto;opacity:.94;transition:opacity .3s,transform .3s}
   .thumbs a:hover img{opacity:1;transform:scale(1.04)}
 
@@ -60,7 +63,7 @@
   .meta .row{display:flex;align-items:baseline;gap:10px;margin-bottom:7px}
   .meta .no{font-family:var(--serif);font-size:13px;color:var(--red);letter-spacing:.06em;font-variant-numeric:tabular-nums}
   .meta .cat{font-size:10px;letter-spacing:.14em;color:var(--dim2);text-transform:uppercase}
-  .meta h3{font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);font-weight:600;line-height:1.55;letter-spacing:.005em}
+  .meta h3{font-family:var(--serif);font-size:clamp(15px,1.35vw,17px);font-weight:600;line-height:1.6;letter-spacing:.005em}
 
   .body-fold{margin-top:12px}
   .body-fold summary{cursor:pointer;list-style:none;font-size:11.5px;color:var(--dim);letter-spacing:.05em;display:inline-flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid transparent;transition:.2s;user-select:none}
@@ -121,8 +124,8 @@
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
   /* ---------- AIGC ---------- */
-  .aigc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 40px}
-  .aigc-card{margin:0;display:flex;flex-direction:column}
+  .aigc-grid{columns:2;column-gap:40px}
+  .aigc-card{margin:0 0 46px;display:block;break-inside:avoid;-webkit-column-break-inside:avoid}
   .aigc-card > a{display:block;border:1px solid var(--rule);background:var(--card);overflow:hidden}
   .aigc-card img{width:100%;height:auto;transition:transform .6s cubic-bezier(.16,1,.3,1)}
   .aigc-card:hover img{transform:scale(1.02)}
@@ -133,7 +136,21 @@
   .av-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:50px;padding-top:26px;border-top:1px solid var(--rule)}
   .av-row a{font-size:11.5px;color:var(--dim);border:1px solid var(--rule);padding:7px 13px;letter-spacing:.02em;transition:.2s;background:var(--card)}
   .av-row a:hover{color:var(--red);border-color:var(--red)}
-  @media(max-width:720px){.aigc-grid{grid-template-columns:1fr;gap:36px}}
+  @media(max-width:720px){.aigc-grid{columns:1}}
+
+  /* ---------- 正文弹层 ---------- */
+  .modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:44px 24px;
+         background:rgba(18,16,12,.52);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .modal.on{display:flex}
+  .modal-inner{position:relative;background:var(--paper);width:100%;max-width:680px;max-height:84vh;overflow-y:auto;
+               padding:54px 56px 48px;border:1px solid var(--rule);box-shadow:0 30px 80px rgba(30,25,15,.18)}
+  .modal-title{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:20px}
+  .modal-body{font-size:15px;line-height:2.05;color:var(--ink2);white-space:pre-wrap;letter-spacing:.01em}
+  .modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:1px solid var(--rule);background:var(--card);
+               cursor:pointer;font-size:17px;line-height:1;color:var(--dim);transition:.2s;border-radius:2px}
+  .modal-close:hover{color:var(--red);border-color:var(--red)}
+  .body-fold summary{cursor:pointer}
+  @media(max-width:720px){.modal{padding:16px}.modal-inner{padding:40px 22px 34px;max-height:90vh}.modal-body{font-size:14px}}
 </style>
 </head>
 <body>
@@ -466,5 +483,51 @@
   </div>
 </footer>
 
+
+<div class="modal" id="readModal" aria-hidden="true">
+  <div class="modal-inner">
+    <button class="modal-close" id="readClose" aria-label="关闭">×</button>
+    <div class="modal-title" id="readTitle">正文</div>
+    <div class="modal-body" id="readBody"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var modal = document.getElementById('readModal');
+  var body  = document.getElementById('readBody');
+  var title = document.getElementById('readTitle');
+  var close = document.getElementById('readClose');
+
+  function open(txt, label) {
+    body.textContent = txt;
+    title.textContent = label || '正文';
+    modal.classList.add('on');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function shut() {
+    modal.classList.remove('on');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.body-fold').forEach(function (d) {
+    var s = d.querySelector('summary');
+    var c = d.querySelector('.copy');
+    if (!s || !c) return;
+    s.addEventListener('click', function (e) {
+      e.preventDefault();
+      var card = d.closest('.card');
+      var h = card ? card.querySelector('h3') : null;
+      open(c.textContent, h ? h.textContent : '正文');
+    });
+  });
+
+  close.addEventListener('click', shut);
+  modal.addEventListener('click', function (e) { if (e.target === modal) shut(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
+})();
+</script>
 </body>
 </html>
