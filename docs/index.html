@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>于硕 · 内容作品集</title>
+<meta name="description" content="于硕（GRASSSII）内容作品集 — 校企合作 OPC 项目组长，带 19 人交付 152 条；8 套 40 张小红书图文成品（全文可读），8 种色调；视频号 725 粉丝。" />
+<style>
+  :root{
+    --paper:#fbf9f5;
+    --card:#ffffff;
+    --ink:#121210;
+    --ink2:#33312c;
+    --dim:#6f6c65;
+    --dim2:#a29e95;
+    --rule:#e4dfd4;
+    --red:#a83a2c;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB",system-ui,sans-serif;
+    --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 34px}
+
+  header{padding:104px 0 64px}
+  .eyebrow{font-size:10.5px;letter-spacing:.28em;color:var(--dim2);text-transform:uppercase;margin-bottom:38px;display:flex;align-items:center;gap:14px}
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+  h1{font-family:var(--serif);font-size:clamp(34px,6vw,64px);line-height:1.18;font-weight:600;letter-spacing:.01em;margin-bottom:26px}
+  h1 em{font-style:normal;color:var(--red)}
+  .lead{font-size:14px;color:var(--dim);max-width:600px;line-height:1.8}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:58px;border-top:1px solid var(--ink)}
+  .stats > div{padding:20px 22px 22px 0}
+  .stats > div + div{border-left:1px solid var(--rule);padding-left:22px}
+  .stats b{display:block;font-family:var(--serif);font-size:clamp(22px,3.2vw,32px);font-weight:600;letter-spacing:-.01em;line-height:1.15;font-variant-numeric:tabular-nums}
+  .stats b i{font-style:normal;font-size:13px;color:var(--dim)}
+  .stats span{font-size:10.5px;color:var(--dim2);letter-spacing:.09em}
+
+  section{padding:76px 0;border-top:1px solid var(--ink)}
+  section:first-of-type{border-top:0;padding-top:20px}
+  .chapter{display:grid;grid-template-columns:auto 1fr;gap:2px 26px;align-items:end;margin-bottom:46px}
+  .ch-no{grid-row:span 2;font-family:var(--serif);font-size:clamp(46px,7vw,78px);line-height:.82;color:#ded8cb;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+  .chapter h2{font-family:var(--serif);font-size:clamp(21px,2.8vw,28px);font-weight:600;letter-spacing:.01em;line-height:1.3}
+  .chapter p{font-size:12px;color:var(--dim);letter-spacing:.02em;margin-top:6px}
+
+  .works{display:grid;grid-template-columns:repeat(2,1fr);gap:58px 46px}
+  .card{display:flex;flex-direction:column}
+  .cover{display:block;background:var(--card);border:1px solid var(--rule);overflow:hidden}
+  .cover img{width:100%;height:auto;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+  .card:hover .cover img{transform:scale(1.018)}
+  .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}
+  .thumbs a{display:block;background:var(--card);border:1px solid var(--rule);overflow:hidden}
+  .thumbs img{width:100%;height:auto;opacity:.94;transition:opacity .3s,transform .3s}
+  .thumbs a:hover img{opacity:1;transform:scale(1.04)}
+
+  .meta{margin-top:18px}
+  .meta .row{display:flex;align-items:baseline;gap:10px;margin-bottom:7px}
+  .meta .no{font-family:var(--serif);font-size:13px;color:var(--red);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+  .meta .cat{font-size:10px;letter-spacing:.14em;color:var(--dim2);text-transform:uppercase}
+  .meta h3{font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);font-weight:600;line-height:1.55;letter-spacing:.005em}
+
+  .body-fold{margin-top:12px}
+  .body-fold summary{cursor:pointer;list-style:none;font-size:11.5px;color:var(--dim);letter-spacing:.05em;display:inline-flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid transparent;transition:.2s;user-select:none}
+  .body-fold summary::-webkit-details-marker{display:none}
+  .body-fold summary::before{content:"+";color:var(--red);font-size:13px;font-weight:600;line-height:1}
+  .body-fold[open] summary::before{content:"\2212"}
+  .body-fold summary:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  .body-fold .copy{margin-top:14px;padding:18px 20px;background:#f5f1e8;border-left:2px solid var(--red);font-size:12.6px;color:var(--ink2);line-height:1.95;white-space:pre-wrap;max-height:420px;overflow-y:auto}
+
+  .lead-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+  .lead-grid > div{padding:26px 24px 30px 0}
+  .lead-grid > div + div{border-left:1px solid var(--rule);padding-left:24px}
+  .lead-grid b{display:block;font-family:var(--serif);font-size:clamp(26px,3.6vw,38px);font-weight:600;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-bottom:14px}
+  .lead-grid b i{font-style:normal;font-size:15px;color:var(--dim)}
+  .lead-grid h4{font-size:10.5px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-bottom:9px}
+  .lead-grid p{font-size:12.4px;color:var(--dim);line-height:1.75}
+
+  .video{background:#0b0b0a;color:#eee;border-top:0;padding:76px 0}
+  .video .chapter .ch-no{color:#2c2c28}
+  .video .chapter h2{color:#f2f2f0}
+  .video .chapter p{color:#7d7d7a}
+  .video .chapter::after{content:"";grid-column:1/-1;height:1px;background:#202020;margin-top:22px}
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+  .vgrid a{display:block;border:1px solid #1b1b1a;overflow:hidden;transition:border-color .3s}
+  .vgrid a:hover{border-color:#3a3a38}
+  .vgrid img{width:100%;height:auto}
+  .vstats{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:26px;font-size:11.5px;color:#7d7d7a;letter-spacing:.02em}
+  .vstats b{color:#eee;font-weight:600;font-size:13px;font-variant-numeric:tabular-nums}
+
+  .note ol{list-style:none;counter-reset:c;margin-top:6px}
+  .note li{counter-increment:c;font-family:var(--serif);font-size:clamp(16px,2.1vw,21px);line-height:1.7;padding:16px 0;border-bottom:1px solid var(--rule);display:flex;gap:20px;align-items:baseline}
+  .note li::before{content:counter(c,decimal-leading-zero);font-family:var(--sans);font-size:10.5px;color:var(--dim2);letter-spacing:.12em;flex:none;font-variant-numeric:tabular-nums}
+  .note li:last-child{border-bottom:0}
+
+  footer{border-top:1px solid var(--ink);padding:34px 0 62px}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--dim2);letter-spacing:.03em}
+  .foot a{color:var(--dim);border-bottom:1px solid transparent;transition:.2s}
+  .foot a:hover{color:var(--red);border-bottom-color:var(--red)}
+  .foot .links{display:flex;gap:24px}
+
+  @media(max-width:900px){
+    .works{grid-template-columns:1fr;gap:46px}
+    .lead-grid{grid-template-columns:repeat(2,1fr)}
+    .lead-grid > div:nth-child(3){border-left:0;padding-left:0}
+    .lead-grid > div:nth-child(n+3){border-top:1px solid var(--rule);padding-top:22px}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 20px}
+    header{padding:64px 0 44px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stats > div + div{border-left:0;padding-left:0}
+    .stats > div:nth-child(even){border-left:1px solid var(--rule);padding-left:18px}
+    .stats > div:nth-child(n+3){border-top:1px solid var(--rule)}
+    section,.video{padding:52px 0}
+    .chapter{grid-template-columns:auto 1fr;gap:0 16px}
+    .body-fold .copy{max-height:none;padding:14px 16px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="eyebrow">Content Portfolio · 2026</div>
+  <h1>内容，<br />是可以被<em>工程化</em>的。</h1>
+  <p class="lead">校企合作 OPC 项目组长。带 19 人交付 152 条小红书图文，自研工具链把单条压到 20 分钟。这里放 8 套成品、40 张图与全部正文。</p>
+
+  <div class="stats">
+    <div><b>152</b><span>条任务 · 19 人团队</span></div>
+    <div><b>40</b><span>张成品图 · 8 种色调</span></div>
+    <div><b>20<i>min</i></b><span>单条交付耗时</span></div>
+    <div><b>725</b><span>视频号粉丝</span></div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="chapter">
+    <span class="ch-no">01</span>
+    <h2>小红书图文</h2>
+    <p>8 套 · 40 张 · 1080×1440 · 全文可展开 · 按色温从暖到冷</p>
+  </div>
+
+  <div class="works">
+      <article class="card">
+        <a class="cover" href="assets/opc/278_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/278_1.webp" alt="大学值得考的高含金量证书，按专业对号入座" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/278_2.webp" target="_blank" rel="noopener"><img src="assets/opc/278_2.webp" alt="" loading="lazy"></a><a href="assets/opc/278_3.webp" target="_blank" rel="noopener"><img src="assets/opc/278_3.webp" alt="" loading="lazy"></a><a href="assets/opc/278_4.webp" target="_blank" rel="noopener"><img src="assets/opc/278_4.webp" alt="" loading="lazy"></a><a href="assets/opc/278_5.webp" target="_blank" rel="noopener"><img src="assets/opc/278_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">01</span><span class="cat">教育 · 米黄</span></div>
+          <h3>大学值得考的高含金量证书，按专业对号入座</h3>
+          <details class="body-fold">
+            <summary>看正文 · 485 字</summary>
+            <div class="copy">大学四年最容易被证书绑架，我当年就是看别人考什么就跟着报，结果大四才发现手里一堆用不上的证，真正卡招聘门槛的反而没考。所以先别急着囤证，想清楚你专业对口什么行业，证书是帮你跨过简历筛选那关的，不是越多越好看。
+
+通用类基本是必选项。四六级很多国企外企直接卡，有的学校还跟毕业挂钩，能早考就早考，别拖到大三大四才慌。计算机等级和普通话属于基础项，普通话还是考教资的前置条件，想当老师或进教育机构，教资值得早点拿下。
+
+专业类才是真正拉开差距的地方。财会往CPA走，法律方向是法考，医学、建筑、金融也各有各的执业资格，这类门槛高、备考周期长，含金量也高，得提前规划节奏。判断含金量就看三点：是不是行业准入必需、招聘里有没有明确要求、考下来能不能长期用。报名时间、考试周期和费用一定提前查，有些证一年只考一次，错过就得再等一年。
+
+语言类雅思托福成绩有效期有限，适合有出国或外企打算的人，别盲目跟风。奖学金、优秀学生干部这类经历证书，部分城市落户和求职能加分，属于锦上添花，别为了凑数去刷。
+
+一句话：先定方向再考证，把时间花在真正对口、能长期用的证上，比囤一堆没用的强多了。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/318_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/318_1.webp" alt="怎么做出简单又好吃的红烧鸡腿，家常做法" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/318_2.webp" target="_blank" rel="noopener"><img src="assets/opc/318_2.webp" alt="" loading="lazy"></a><a href="assets/opc/318_3.webp" target="_blank" rel="noopener"><img src="assets/opc/318_3.webp" alt="" loading="lazy"></a><a href="assets/opc/318_4.webp" target="_blank" rel="noopener"><img src="assets/opc/318_4.webp" alt="" loading="lazy"></a><a href="assets/opc/318_5.webp" target="_blank" rel="noopener"><img src="assets/opc/318_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">02</span><span class="cat">美食 · 暖橙</span></div>
+          <h3>怎么做出简单又好吃的红烧鸡腿，家常做法</h3>
+          <details class="body-fold">
+            <summary>看正文 · 557 字</summary>
+            <div class="copy">第一次做红烧鸡腿我就差点栽在炒糖色上，锅底糖一冒小泡我愣神，回头就糊了，整锅带苦味。后来才摸到门道：糖色想炒好，火小了什么都好说。先跟你们讲怎么下手，真的不难。
+
+鸡腿洗干净先在表面划两刀，入味更快。冷水下锅，扔几片姜、倒一勺料酒焯水，水开后撇掉浮沫，捞出来用温水冲净。这一步别偷懒，血沫慢慢析出来，腥味基本就没了，热水下锅反而把腥味锁在肉里。
+
+接下来是给鸡腿上色的关键。锅里少放点油，丢几块冰糖，全程小火慢慢熬，糖化成枣红色、冒出细密小泡的时候，赶紧把鸡腿倒进去翻炒，让每块都裹匀。糖色最容易翻车，颜色一到就得下肉，别犹豫。不敢炒的话就用老抽顶上，下鸡腿后直接加生抽老抽和冰糖，颜色照样红亮，就是少了点焦糖香，新手这么来更稳。鸡腿我一般选琵琶腿，肉厚耐炖；整只炖出来更嫩，看你自己。
+
+然后放葱段姜片、八角桂皮，淋生抽老抽和料酒，炒出香味，倒热水没过鸡腿，加盐调味，大火烧开转小火，盖盖子炖二十分钟上下。中途翻一次让它入味，筷子能轻松扎透、不见血水就熟了，肉厚就多几分钟。
+
+汤汁收浓那一步最考验耐心：开大火边收边翻，看着它变浓稠挂到鸡腿上，红亮油润，特别下饭。爱软烂就多炖十分钟。收汁这阵子人别走开，一转身就糊底。
+
+出锅别提多香了，烫嘴也等不及夹一块，肉软嫩到筷子一碰就散，把汤汁淋在米饭上，我能多吃一碗。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/867_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/867_1.webp" alt="东莞鞋王是谁？不是网红，是代工起家的尹积琪" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/867_2.webp" target="_blank" rel="noopener"><img src="assets/opc/867_2.webp" alt="" loading="lazy"></a><a href="assets/opc/867_3.webp" target="_blank" rel="noopener"><img src="assets/opc/867_3.webp" alt="" loading="lazy"></a><a href="assets/opc/867_4.webp" target="_blank" rel="noopener"><img src="assets/opc/867_4.webp" alt="" loading="lazy"></a><a href="assets/opc/867_5.webp" target="_blank" rel="noopener"><img src="assets/opc/867_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">03</span><span class="cat">产业 · 橙红</span></div>
+          <h3>东莞鞋王是谁？不是网红，是代工起家的尹积琪</h3>
+          <details class="body-fold">
+            <summary>看正文 · 479 字</summary>
+            <div class="copy">刷到东莞鞋王这个词时，我第一反应也以为是哪个网红，查了才知道，他其实是东莞制鞋行业里一位做了三十多年鞋的企业家，叫尹积琪。他1991年入行，最早给GUCCI、CK这些国际大牌代工，硬是把一间小作坊做成了圈内出名的代工大王，东莞鞋王这个称呼就是这么来的。
+
+他还有几个身份：东莞市皮革鞋业协会会长、CHCH平衡鞋的创始人。2008年北京奥运会中国代表团的礼宾鞋，就是他的工厂做的，姚明、刘翔都穿过。可那会儿鞋是我们做的，上面却没有中国品牌的名字，他说起这事挺遗憾，也正是这份不甘心，让他下决心做自己的品牌。
+
+真正让他出圈的，是这几年他把传统制造和直播电商结合起来。2025年1月他第一次直播带货，从早上8点播到下午2点半，一场卖了157.6万元。他穿着红色高跟鞋、说着一口莞普，还带着公司男高管拍高跟鞋男团跳舞的视频，一群大老爷们儿在镜头前跳得认真，看着又好笑又心酸，用这种反差感让东莞鞋王从行业圈火到了大众面前。
+
+所以东莞鞋王不是固定头衔，而是圈内对尹积琪这位敢从代工转型做自主品牌、又敢下场直播的企业家的称呼。你要是刷到自称东莞鞋王的人，大概率就是他。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/304_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/304_1.webp" alt="小白鞋发黄怎么洗，关键在晾晒不在洗" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/304_2.webp" target="_blank" rel="noopener"><img src="assets/opc/304_2.webp" alt="" loading="lazy"></a><a href="assets/opc/304_3.webp" target="_blank" rel="noopener"><img src="assets/opc/304_3.webp" alt="" loading="lazy"></a><a href="assets/opc/304_4.webp" target="_blank" rel="noopener"><img src="assets/opc/304_4.webp" alt="" loading="lazy"></a><a href="assets/opc/304_5.webp" target="_blank" rel="noopener"><img src="assets/opc/304_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">04</span><span class="cat">生活 · 米白</span></div>
+          <h3>小白鞋发黄怎么洗，关键在晾晒不在洗</h3>
+          <details class="body-fold">
+            <summary>看正文 · 440 字</summary>
+            <div class="copy">小白鞋一洗就发黄，我一开始以为是没洗干净，后来才发现问题出在晾晒上。暴晒加残留的洗涤剂，才是鞋面泛黄的元凶，洗得再用力也没用。
+
+清洗时先用软毛刷蘸清水把浮灰刷掉，局部发黄的地方挤点白色牙膏，用旧牙刷打圈刷，再拿湿布擦净，牙膏里的研磨成分对帆布和网面特别管用。网面刷的时候动作轻点，别把网眼刷破。顽固黄渍可以试试小苏打加白醋调成糊，敷十几分钟再刷。皮面就别用牙膏硬刷了，换中性清洁剂和软布，免得伤涂层。
+
+最关键的还是晾晒。千万别放太阳底下暴晒，紫外线一晒氧化更快，鞋面更黄。正确做法是冲净挤干后，用白色纸巾把整只鞋包严实，放通风阴凉处晾干，纸巾会把残留的洗涤剂和水分吸走，鞋干后纸巾发黄、鞋面却白净。没纸巾就用干净的白色棉布，别用彩色或有图案的，颜色会染上去。
+
+鞋边和橡胶底发黄，用小苏打糊或专用橡胶清洁剂刷，刷完照样冲净阴干。日常穿完及时擦掉污渍、别让鞋长期泡水、别和深色衣服一起洗，能少很多麻烦。要是黄渍已经渗进纤维洗不掉，就交给专业洗鞋剂或洗鞋店吧。记住，洗得干净不如晾得对。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/f652_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/f652_1.webp" alt="羊毛衫缩水怎么处理？温水护发素拉伸法" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/f652_2.webp" target="_blank" rel="noopener"><img src="assets/opc/f652_2.webp" alt="" loading="lazy"></a><a href="assets/opc/f652_3.webp" target="_blank" rel="noopener"><img src="assets/opc/f652_3.webp" alt="" loading="lazy"></a><a href="assets/opc/f652_4.webp" target="_blank" rel="noopener"><img src="assets/opc/f652_4.webp" alt="" loading="lazy"></a><a href="assets/opc/f652_5.webp" target="_blank" rel="noopener"><img src="assets/opc/f652_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">05</span><span class="cat">生活 · 浅蓝</span></div>
+          <h3>羊毛衫缩水怎么处理？温水护发素拉伸法</h3>
+          <details class="body-fold">
+            <summary>看正文 · 557 字</summary>
+            <div class="copy">羊毛衫洗缩水，从M变成XS，多半是扔进洗衣机搅出来的。羊毛纤维表面有鳞片，在湿热和反复摩擦下会互相纠缠、毡化，越好的料子缩得越明显。已经缩水的羊毛衫能不能救，关键看缩得严不严重，轻微到中度的可以自己处理。
+
+最常用的方法是温水护发素法。准备一盆温水，加入护发素，护发素和水按1比3的比例搅匀，把缩水的羊毛衫放进去浸泡10到15分钟。护发素能软化纤维、减少摩擦，让纠缠的鳞片松开。浸泡时轻轻揉搓并顺势拉伸，取出后不要拧，用挤压的方式把水挤掉。
+
+趁羊毛衫还湿润，把它平铺在一条干浴巾上，用浴巾卷起来，边挤压边卷，反复几次吸走水分。然后趁湿润状态轻轻把羊毛衫拉伸到合适尺寸，平铺在晾衣篮里阴凉处晾干。全程不要用手拧绞，也不要挂衣架晾，否则会变形。晾干过程中不要暴晒，会损伤纤维。
+
+如果缩水比较严重，可以试试白醋法。在温水中加少量白醋，把羊毛衫浸泡30分钟，取出后轻轻拉扯，再平铺晾干。白醋能软化毛料，让紧缩的纤维变蓬松。也可以用蒸汽熨斗加热后趁热拉伸，但力度不好掌握，容易拉过头。
+
+需要提醒的是，缩水特别严重、已经明显毡化的羊毛衫，很难完全恢复原样，市面上那些复原剂本质也是柔顺剂，效果有限。与其事后补救，不如平时注意护理：用羊毛专用洗涤剂，水温控制在30℃以下，单独手洗，轻按不要揉搓，漂洗后挤压水分，平铺阴干。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/1258_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/1258_1.webp" alt="除了步行骑车公交，还有哪些值得倡导的出行方式？" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/1258_2.webp" target="_blank" rel="noopener"><img src="assets/opc/1258_2.webp" alt="" loading="lazy"></a><a href="assets/opc/1258_3.webp" target="_blank" rel="noopener"><img src="assets/opc/1258_3.webp" alt="" loading="lazy"></a><a href="assets/opc/1258_4.webp" target="_blank" rel="noopener"><img src="assets/opc/1258_4.webp" alt="" loading="lazy"></a><a href="assets/opc/1258_5.webp" target="_blank" rel="noopener"><img src="assets/opc/1258_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">06</span><span class="cat">议题 · 亮蓝</span></div>
+          <h3>除了步行骑车公交，还有哪些值得倡导的出行方式？</h3>
+          <details class="body-fold">
+            <summary>看正文 · 536 字</summary>
+            <div class="copy">以前我总觉得，不开车就只能挤公交，直到有次赶早高峰，地铁口到公司那两公里，走路嫌慢、打车又堵，最后扫了辆共享单车，十分钟就到，还出了一身汗，反而清醒。从那以后我才发现，值得倡导的出行方式其实不少，核心就一句：能少开车就少开车，能拼着走就拼着走。
+
+短途接驳，共享单车和共享电单车是真香。一两公里这种最后一公里，从地铁站到家、从公交站到公司，骑车比走路省时间，又比开车低碳，还不用等车。我每次下班懒得走那一段，扫一辆骑回去，风一吹整个人都松快。记得规范停放，别乱停占道，这也是绿色出行的一部分。
+
+中短途，电动自行车和拼车顺风车都值得试。三五公里通勤，电动车灵活又省力，堵车也不怕；拼车顺风车把一辆车多个人坐，人均排放低不少，适合路线固定、顺路的人。我同事每天拼车上下班，说既省钱又不孤单。拼车记得选正规平台，确认好行程和费用，安全第一。
+
+中短途出行，高铁通常比自驾和飞机更低碳，点对点时间可控，还省去停车堵车的麻烦。能坐高铁，就不必非要开车或坐飞机。其实还有一种更省事的，就是减少不必要的出行。能远程办公、线上办事、网上买菜就线上解决，把出门次数降下来，本身就是最直接的低碳。
+
+说到底，值得倡导的不是某一种方式，而是按距离选最合适的、能共享就共享、能少走就少走的习惯。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/1324_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/1324_1.webp" alt="手机防触摸模式怎么关闭？临时退出和彻底关闭都在这" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/1324_2.webp" target="_blank" rel="noopener"><img src="assets/opc/1324_2.webp" alt="" loading="lazy"></a><a href="assets/opc/1324_3.webp" target="_blank" rel="noopener"><img src="assets/opc/1324_3.webp" alt="" loading="lazy"></a><a href="assets/opc/1324_4.webp" target="_blank" rel="noopener"><img src="assets/opc/1324_4.webp" alt="" loading="lazy"></a><a href="assets/opc/1324_5.webp" target="_blank" rel="noopener"><img src="assets/opc/1324_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">07</span><span class="cat">科技 · 深蓝</span></div>
+          <h3>手机防触摸模式怎么关闭？临时退出和彻底关闭都在这</h3>
+          <details class="body-fold">
+            <summary>看正文 · 428 字</summary>
+            <div class="copy">手机从口袋里掏出来，屏幕怎么点都没反应，解锁还自己乱跳，我第一反应也是以为屏坏了。后来才明白，多半是防触摸模式被触发了，它靠距离感应器判断手机有没有被遮挡，被挡住就先屏蔽触控，免得在口袋里误拨号、误开应用。先分清你是临时卡住，还是想彻底关掉。
+
+临时触发的话，最简单就是按一下电源键熄屏，再重新亮屏，一般就退出来了；还不行就同时按住音量上键和电源键强制退出，或者按屏幕提示在下方滑两下。我上次卡在防误触里，熄屏重亮一次就好了。想彻底关闭，就得去设置里找开关，不同品牌叫法不一样。
+
+多数安卓机在锁屏、显示或辅助功能菜单下，能搜到防误触或防触摸的开关，关掉就行；找不到就在设置里直接搜误触或防触摸关键词，比翻菜单快。不过说实话，这个功能本来就是防口袋误触的，不建议长期关。我关过一阵，结果放口袋老自动拨号，又老老实实开回来了。
+
+真卡住的时候，用熄屏重亮退出就够了。要是按这些步骤还退不出来，再检查是不是贴膜、保护壳或油污挡住了上半部分的感应区，清理后再试。</div>
+          </details>
+        </div>
+      </article>
+      <article class="card">
+        <a class="cover" href="assets/opc/1185_1.webp" target="_blank" rel="noopener">
+          <img src="assets/opc/1185_1.webp" alt="喜欢兔子洞樱桃汽水，术力口还能听这些" loading="lazy">
+        </a>
+        <div class="thumbs"><a href="assets/opc/1185_2.webp" target="_blank" rel="noopener"><img src="assets/opc/1185_2.webp" alt="" loading="lazy"></a><a href="assets/opc/1185_3.webp" target="_blank" rel="noopener"><img src="assets/opc/1185_3.webp" alt="" loading="lazy"></a><a href="assets/opc/1185_4.webp" target="_blank" rel="noopener"><img src="assets/opc/1185_4.webp" alt="" loading="lazy"></a><a href="assets/opc/1185_5.webp" target="_blank" rel="noopener"><img src="assets/opc/1185_5.webp" alt="" loading="lazy"></a></div>
+        <div class="meta">
+          <div class="row"><span class="no">08</span><span class="cat">音乐 · 紫</span></div>
+          <h3>喜欢兔子洞樱桃汽水，术力口还能听这些</h3>
+          <details class="body-fold">
+            <summary>看正文 · 531 字</summary>
+            <div class="copy">我一开始也是被兔子洞和樱桃汽水带进术力口的，那种鼓点密、编曲带点暗黑和讽刺的劲儿，一听就上头，反而慢悠悠的抒情曲我基本听不进去。顺着这个口味往下挖，其实有迹可循。
+
+兔子洞和樱桃汽水都是 DECO*27 写的，他的吸血鬼、幽灵法则、仿生人少女、少女解剖基本是同一路数，电子感强、鼓点密，歌词带点病娇和讽刺，和兔子洞一脉相承。
+
+这几首里吸血鬼和幽灵法则最接近兔子洞的暗黑电子感，仿生人少女和少女解剖更偏病娇和讽刺，适合喜欢歌词有深意的。克隆克隆是匹诺曹 P 的，他的像神一样、转生苹果、慢动作、魔法少女与巧克力也都是快节奏加犀利歌词，讽刺味很足。
+
+你不太喜欢的那首歌姬失格其实是匹诺曹 P 偏抒情反思的作品，说明你更吃他快节奏那一面，避开慢歌就好。再往外扩，可以试试这些同样偏暗黑电子风的：かいりきベア的毒液、亲爱的舞蹈，ツミキ的仿声，すりぃ的自我摇滚，柊キライ的皱鳃鲨、自噬。
+
+这些歌节奏都很快，编曲带暗黑感，歌词也常有讽刺或病娇色彩。建议先从 DECO*27 和匹诺曹 P 的快歌听起，再往上面那几位扩，基本不会踩雷。如果听完觉得哪首特别对味，顺着那位作者的其他作品继续挖就行。
+
+想更重口的话，可以试试鬱 P 的金属风术力口，失真吉他和嘶吼感会更强烈。</div>
+          </details>
+        </div>
+      </article>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="chapter">
+    <span class="ch-no">02</span>
+    <h2>组长</h2>
+    <p>不是挂名：学院与企业之间唯一的双向翻译层</p>
+  </div>
+
+  <div class="lead-grid">
+    <div><b>19</b><h4>分工</h4><p>人团队 152 条，按垂类与产能配平，产出可交互派工表与选题索引</p></div>
+    <div><b>13</b><h4>标准</h4><p>章 SOP，把企业 12 页规范翻成可执行流程，实测反证修正 3 处误读</p></div>
+    <div><b>71</b><h4>工具</h4><p>个脚本（61 JS + 10 Python），打通 3 套互不相通的客户端</p></div>
+    <div><b>100<i>%</i></b><h4>质检</h4><p>8 套 40 张全过：MD5 逐字节比对 + 尺寸白边脚本化检测</p></div>
+  </div>
+</section>
+
+<section class="video">
+  <div class="wrap">
+    <div class="chapter">
+      <span class="ch-no">03</span>
+      <h2>视频号</h2>
+      <p>GRASSSII · 16 条原创 · 最高单条 6.2k 播放</p>
+    </div>
+
+    <div class="vgrid">
+      <a href="assets/opc_c1_1.webp" target="_blank" rel="noopener"><img src="assets/opc_c1_1.webp" alt="账号后台" loading="lazy"></a>
+      <a href="assets/opc_c2_1.webp" target="_blank" rel="noopener"><img src="assets/opc_c2_1.webp" alt="科普 01" loading="lazy"></a>
+      <a href="assets/opc_c3_1.webp" target="_blank" rel="noopener"><img src="assets/opc_c3_1.webp" alt="科普 02" loading="lazy"></a>
+      <a href="assets/opc_c4_1.webp" target="_blank" rel="noopener"><img src="assets/opc_c4_1.webp" alt="安全与生活" loading="lazy"></a>
+      <a href="assets/opc_c5_1.webp" target="_blank" rel="noopener"><img src="assets/opc_c5_1.webp" alt="生活" loading="lazy"></a>
+    </div>
+
+    <div class="vstats">
+      <span><b>725</b> 粉丝</span>
+      <span><b>1,143</b> 累计赞</span>
+      <span><b>590</b> 心</span>
+      <span><b>16</b> 条原创</span>
+      <span><b>6.2k</b> 最高播放 · Wi-Fi 信号为什么看不见</span>
+    </div>
+  </div>
+</section>
+
+<section class="note wrap">
+  <div class="chapter">
+    <span class="ch-no">04</span>
+    <h2>交付前会过的三条</h2>
+    <p>不是口号，是每篇都要过一遍的检查</p>
+  </div>
+  <ol>
+    <li>选题先问一句：这条解决了谁的什么困惑。</li>
+    <li>封面只讲一件事，字要大到划过去也看得清。</li>
+    <li>不确定的事实，不编。</li>
+  </ol>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <span>公众号：江河风物志</span>
+    <div class="links">
+      <a href="https://github.com/zheng-qinghe" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://zheng-qinghe.github.io/" target="_blank" rel="noopener">主页</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
