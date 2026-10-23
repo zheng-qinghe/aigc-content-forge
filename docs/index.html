@@ -119,6 +119,21 @@
     .body-fold .copy{max-height:none;padding:14px 16px}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+  /* ---------- AIGC ---------- */
+  .aigc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 40px}
+  .aigc-card{margin:0;display:flex;flex-direction:column}
+  .aigc-card > a{display:block;border:1px solid var(--rule);background:var(--card);overflow:hidden}
+  .aigc-card img{width:100%;height:auto;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+  .aigc-card:hover img{transform:scale(1.02)}
+  .aigc-card figcaption{margin-top:14px}
+  .aigc-card .ak{font-size:10px;letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+  .aigc-card h4{font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.5;margin:7px 0 6px;letter-spacing:.005em}
+  .aigc-card p{font-size:12.5px;color:var(--dim);line-height:1.72}
+  .av-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:50px;padding-top:26px;border-top:1px solid var(--rule)}
+  .av-row a{font-size:11.5px;color:var(--dim);border:1px solid var(--rule);padding:7px 13px;letter-spacing:.02em;transition:.2s;background:var(--card)}
+  .av-row a:hover{color:var(--red);border-color:var(--red)}
+  @media(max-width:720px){.aigc-grid{grid-template-columns:1fr;gap:36px}}
 </style>
 </head>
 <body>
@@ -362,9 +377,75 @@
   </div>
 </section>
 
-<section class="note wrap">
+<section class="wrap">
   <div class="chapter">
     <span class="ch-no">04</span>
+    <h2>AIGC 多模态</h2>
+    <p>图文 · 视频 · 音频 · 从工程图纸到成片</p>
+  </div>
+
+  <div class="aigc-grid">
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_1.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_1.webp" alt="仅基于 CAD 图纸生成汽车配件产品图" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">工程图 → 产品图</span>
+          <h4>仅基于 CAD 图纸生成汽车配件产品图</h4>
+          <p>不给实物、不拍照片，从二维工程图直接产出可用的商业产品图。</p>
+        </figcaption>
+      </figure>
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_2.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_2.webp" alt="基于 2D 图纸的多视角图纸生成" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">多视角一致性</span>
+          <h4>基于 2D 图纸的多视角图纸生成</h4>
+          <p>同一个零件，一次生成多个视角，结构与比例保持一致。</p>
+        </figcaption>
+      </figure>
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_3.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_3.webp" alt="人体饮水行为的三级神经调节通路" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">知识可视化</span>
+          <h4>人体饮水行为的三级神经调节通路</h4>
+          <p>把生理机制压成一张能读懂的科普图。</p>
+        </figcaption>
+      </figure>
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_4.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_4.webp" alt="商品海报（已脱敏）" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">电商视觉</span>
+          <h4>商品海报（已脱敏）</h4>
+          <p>从产品图到成稿的完整视觉方案。</p>
+        </figcaption>
+      </figure>
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_5.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_5.webp" alt="融合现实的批注（二）" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">图像编辑</span>
+          <h4>融合现实的批注（二）</h4>
+          <p>在真实场景上叠加标注层，用于讲解与演示。</p>
+        </figcaption>
+      </figure>
+      <figure class="aigc-card">
+        <a href="assets/aigc/aigc_6.webp" target="_blank" rel="noopener"><img src="assets/aigc/aigc_6.webp" alt="融合现实的批注（一）" loading="lazy"></a>
+        <figcaption>
+          <span class="ak">图像编辑</span>
+          <h4>融合现实的批注（一）</h4>
+          <p>同一手法的另一组场景。</p>
+        </figcaption>
+      </figure>
+  </div>
+
+  <div class="av-row">
+      <a href="https://github.com/zheng-qinghe/aigc-content-forge/blob/main/%E8%A7%86%E9%A2%91/Seedance%202.0%20%E5%AE%98%E6%96%B9%E6%A8%A1%E5%9E%8B%E5%AE%9E%E6%B5%8B.MP4" target="_blank" rel="noopener">视频 · Seedance 2.0 实测 ↗</a>
+      <a href="https://github.com/zheng-qinghe/aigc-content-forge/blob/main/%E8%A7%86%E9%A2%91/%E5%9C%A8%E6%92%AD%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%81%8C%E5%9C%BA%E7%84%A6%E8%99%91_NotebookLM.mp4" target="_blank" rel="noopener">视频 · NotebookLM 播客 ↗</a>
+      <a href="https://github.com/zheng-qinghe/aigc-content-forge/blob/main/%E8%A7%86%E9%A2%91/%E5%B9%BF%E5%91%8A%E5%B1%95%E7%A4%BA%E7%B4%A0%E6%9D%90.MP4" target="_blank" rel="noopener">视频 · 广告展示素材 ↗</a>
+      <a href="https://github.com/zheng-qinghe/aigc-content-forge/blob/main/%E9%9F%B3%E9%A2%91/%E5%9F%BA%E4%BA%8EIndexTTS2%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90%E7%9A%84%E7%9A%84%E4%B8%80%E6%AE%B5%E9%9F%B3%E9%A2%91demo.wav" target="_blank" rel="noopener">音频 · IndexTTS2 本地 TTS ↗</a>
+  </div>
+</section>
+
+<section class="note wrap">
+  <div class="chapter">
+    <span class="ch-no">05</span>
     <h2>交付前会过的三条</h2>
     <p>不是口号，是每篇都要过一遍的检查</p>
   </div>
